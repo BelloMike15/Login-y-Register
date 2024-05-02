@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+                0 10px 10px rgba(0,0,0,0.22);
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-container {
+    background: #f2f2f2;
+}
+
+.sign-in-container {
+    background: #e6e6e6;
+}
+
+.overlay-container {
+    position: relative;
+    background: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-panel {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-left {
+    transform: translateX(-50%);
+}
+
+.overlay-right {
+    transform: translateX(50%);
+}
+
+h1 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+input, button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #ff416c;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6285;
+}
+
+a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.overlay-left, .overlay-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.overlay-left h1, .overlay-right h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.overlay-left p, .overlay-right p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.overlay-left button, .overlay-right button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+}
+
+.overlay-left button:hover, .overlay-right button:hover {
+    background-color: #ff527a;
+}
+
+.overlay-left button:active, .overlay-right button:active {
+    transform: translateY(2px);
+}
+
+.overlay-left button:focus, .overlay-right button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.overlay-left button:disabled, .overlay-right button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.overlay-left button:focus:not(:active), .overlay-right button:focus:not(:active) {
+    box-shadow: 0 0 0 0.2rem rgba(255, 65, 108, 0.5);
+}
+
+.overlay-left button:focus:not(:active):not(:disabled), .overlay-right button:focus:not(:active):not(:disabled) {
+    box-shadow: 0 0 0 0.2rem rgba(255, 65, 108, 0.5), 0 0 0 0.2rem rgba(255, 65, 108, 0.25);
+}
